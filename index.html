@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070711" />
+  <meta name="description" content="SOLBRO — the Solana degen meme community. Check your SOLBRO Phase 1 airdrop allocation." />
+  <title>SOLBRO — Just One More Buy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="SOLBRO home">
+      <img src="assets/solbro-logo.png" alt="SOLBRO mascot logo" />
+      <span>SOLBRO</span>
+    </a>
+    <nav>
+      <a href="#airdrop">Airdrop</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#token">Token</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="nav-btn" href="https://x.com/SolBro_Official" target="_blank" rel="noopener">Follow X ↗</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="pill"><span class="dot"></span> PHASE 1 AIRDROP IS LIVE</div>
+        <h1>JUST ONE<br><span>MORE BUY.</span></h1>
+        <p class="lead">
+          Meet <strong>SOLBRO</strong> — the Solana degen who buys the dip, chases the pump,
+          and somehow always has one more buy left.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#airdrop">Check Airdrop</a>
+          <a class="btn ghost" href="#roadmap">View Roadmap</a>
+        </div>
+        <div class="mini-stats">
+          <div><strong>2M</strong><span>max allocation*</span></div>
+          <div><strong>100K</strong><span>min allocation*</span></div>
+          <div><strong>SOL</strong><span>built for Solana</span></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="glow"></div>
+        <img src="assets/solbro-logo.png" alt="SOLBRO 3D mascot" />
+      </div>
+    </section>
+
+    <section class="banner-wrap">
+      <img src="assets/solbro-banner.png" alt="SOLBRO neon banner" />
+    </section>
+
+    <section id="airdrop" class="section airdrop-section">
+      <div class="section-heading center">
+        <div class="eyebrow">PHASE 1 • AIRDROP</div>
+        <h2>Check Your <span>$SOLBRO</span> Allocation</h2>
+        <p>
+          Complete the two community tasks, then enter your Solana wallet address.
+          Allocation rules and final claim details will be announced by the team.
+        </p>
+      </div>
+
+      <div class="airdrop-card">
+        <div class="tasks">
+          <div class="task">
+            <div class="task-icon">𝕏</div>
+            <div class="task-text">
+              <strong>Follow SOLBRO on X</strong>
+              <span>@SolBro_Official</span>
+            </div>
+            <a class="task-btn" href="https://x.com/SolBro_Official" target="_blank" rel="noopener" onclick="markTask('x')">Follow ↗</a>
+          </div>
+
+          <div class="task">
+            <div class="task-icon">✈</div>
+            <div class="task-text">
+              <strong>Join the Telegram channel</strong>
+              <span>@SOLBRO_OFFICIAL</span>
+            </div>
+            <a class="task-btn" href="https://t.me/SOLBRO_OFFICIAL" target="_blank" rel="noopener" onclick="markTask('tg')">Join ↗</a>
+          </div>
+        </div>
+
+        <label class="confirm-row">
+          <input id="confirmTasks" type="checkbox" onchange="toggleChecker()" />
+          <span>I have completed both community tasks.</span>
+        </label>
+
+        <div class="checker" id="checker">
+          <label for="wallet">Solana wallet address</label>
+          <div class="input-row">
+            <input id="wallet" type="text" inputmode="text" autocomplete="off"
+              placeholder="Enter your Solana address..." maxlength="64" />
+            <button class="btn primary check-btn" onclick="checkAirdrop()">Check</button>
+          </div>
+          <div class="hint">
+            Airdrop allocations are intended to reflect eligible Solana-user activity criteria.
+            This checker is a front-end preview until final eligibility verification is connected.
+          </div>
+          <div id="result" class="result" aria-live="polite"></div>
+        </div>
+      </div>
+      <p class="fineprint">*Displayed allocation is a preliminary checker result. Final eligibility, amount, snapshot and claim rules will be announced officially.</p>
+    </section>
+
+    <section class="section dark-section">
+      <div class="section-heading center">
+        <div class="eyebrow">HOW IT WORKS</div>
+        <h2>Three Steps. <span>One Bro.</span></h2>
+      </div>
+      <div class="steps">
+        <div class="step"><span>01</span><h3>Complete Tasks</h3><p>Follow the official X account and join the official Telegram channel.</p></div>
+        <div class="step"><span>02</span><h3>Check Wallet</h3><p>Enter your Solana address to see the current airdrop allocation preview.</p></div>
+        <div class="step"><span>03</span><h3>Wait for Claim</h3><p>Claim details will be announced after the $SOLBRO launch phase.</p></div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section">
+      <div class="section-heading">
+        <div class="eyebrow">ROADMAP</div>
+        <h2>From <span>Bro</span> to Everywhere.</h2>
+        <p>No fake promises. Just milestones we plan to chase, one phase at a time.</p>
+      </div>
+      <div class="roadmap">
+        <article class="road active">
+          <div class="phase">PHASE 01</div>
+          <h3>Free Airdrop</h3>
+          <ul>
+            <li>Community launch</li>
+            <li>Airdrop checker</li>
+            <li>Eligibility & allocation announcement</li>
+            <li>Build the SOLBRO community</li>
+          </ul>
+          <span class="status">LIVE NOW</span>
+        </article>
+
+        <article class="road">
+          <div class="phase">PHASE 02</div>
+          <h3>$SOLBRO Launch</h3>
+          <ul>
+            <li>Token launch on a DEX</li>
+            <li>Official contract announcement</li>
+            <li>Airdrop token claim opens</li>
+            <li>Liquidity & community growth</li>
+          </ul>
+        </article>
+
+        <article class="road">
+          <div class="phase">PHASE 03</div>
+          <h3>Market Expansion</h3>
+          <ul>
+            <li>CoinGecko application</li>
+            <li>CoinMarketCap application</li>
+            <li>More ecosystem visibility</li>
+            <li>Community partnerships</li>
+          </ul>
+        </article>
+
+        <article class="road">
+          <div class="phase">PHASE 04</div>
+          <h3>Global Marketing</h3>
+          <ul>
+            <li>Creator & meme campaigns</li>
+            <li>Community competitions</li>
+            <li>Global social expansion</li>
+            <li>Exchange outreach</li>
+          </ul>
+        </article>
+
+        <article class="road">
+          <div class="phase">PHASE 05</div>
+          <h3>Big Exchanges</h3>
+          <ul>
+            <li>Target major CEX listings</li>
+            <li>Binance outreach</li>
+            <li>KuCoin outreach</li>
+            <li>Bybit outreach</li>
+          </ul>
+          <span class="status future">GOAL</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="token" class="section token-section">
+      <div class="token-card">
+        <div>
+          <div class="eyebrow">TOKEN</div>
+          <h2>$SOLBRO</h2>
+          <p>The meme token for the Solana degen who always has one more buy.</p>
+        </div>
+        <div class="contract">
+          <span>CONTRACT ADDRESS</span>
+          <strong>COMING SOON</strong>
+          <small>The official contract will be published after the token launch.</small>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq-section">
+      <div class="section-heading center">
+        <div class="eyebrow">FAQ</div>
+        <h2>Bro, <span>what?</span></h2>
+      </div>
+      <div class="faq-grid">
+        <details open><summary>Is the airdrop free?</summary><p>Yes. Phase 1 is planned as a free community airdrop. Official eligibility and claim rules will be announced by SOLBRO.</p></details>
+        <details><summary>When can I claim?</summary><p>Claiming is not live yet. The claim option will be enabled and announced after the Phase 2 token launch.</p></details>
+        <details><summary>Why is the contract address missing?</summary><p>The token contract has not been published yet. The site currently shows “Coming Soon” so nobody mistakes a placeholder for an official contract.</p></details>
+        <details><summary>Does the checker guarantee an airdrop?</summary><p>No. The current page is a front-end allocation preview. Final eligibility, snapshot and claim rules will be confirmed by the official team.</p></details>
+      </div>
+    </section>
+
+    <section class="community">
+      <div>
+        <div class="eyebrow">JOIN THE DEGENS</div>
+        <h2>One more buy.<br><span>One more bro.</span></h2>
+      </div>
+      <div class="community-actions">
+        <a class="btn primary" href="https://x.com/SolBro_Official" target="_blank" rel="noopener">Follow on X ↗</a>
+        <a class="btn ghost" href="https://t.me/SOLBRO_OFFICIAL" target="_blank" rel="noopener">Join Telegram ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><img src="assets/solbro-logo.png" alt="" /><span>SOLBRO</span></div>
+    <p>Just One More Buy. © <span id="year"></span> SOLBRO.</p>
+    <p class="disclaimer">SOLBRO is a meme/community project. Nothing on this website is financial advice or a promise of returns.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
